@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/822687/RPS/_apis/build/status/Razarac00.JJK-UI?branchName=develop)](https://dev.azure.com/822687/RPS/_build/latest?definitionId=3&branchName=develop)
+
 # Ui
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
