@@ -48,3 +48,21 @@ stages:
           npm install
           ng test 
         displayName: 'npm install and test'
+
+- stage: 'mirror'
+  condition: succeeded() 
+  dependsOn: 
+    - build
+    - test
+  displayName: 'mirror-ui'
+  jobs:
+    - job:
+      condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/develop'))
+      displayName: 'mirror to CodeCommit'
+      steps:
+      - task: mirror-git-repository-vsts-task@1
+        inputs:
+          sourceGitRepositoryUri: '$(Build.Repository.Uri)'
+          destinationGitRepositoryUri: '$(DestinationRepo)'
+          destinationGitRepositoryPersonalAccessToken: '$(AccessID:AccessKey)'
+        displayName: 'Final destination'
