@@ -64,5 +64,5 @@ stages:
         inputs:
           sourceGitRepositoryUri: '$(Build.Repository.Uri)'
           destinationGitRepositoryUri: '$(DestinationRepo)'
-          destinationGitRepositoryPersonalAccessToken: '$(AccessID:AccessKey)'
+          destinationGitRepositoryPersonalAccessToken: '$(AccessID):$(AccessKey)'
         displayName: 'Final destination'
