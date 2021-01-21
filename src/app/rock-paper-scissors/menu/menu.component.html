@@ -8,7 +8,15 @@
           <h1>Rock Paper Scissors Menu</h1>
           <form>
             <div class="form-group">
-
+                <label for="opponent">Select Your Opponent</label>
+                <select class="form-control" [(ngModel)]="menuData.opponent" id="opponent" name="opponent" #opponent="ngModel" required>
+                  <option>Player</option>
+                  <option>Computer</option>
+                </select>
+            </div>
+            <div class="menu__validation"
+            *ngIf="opponent.errors?.required">
+              * Opponent Required
             </div>
           </form>
           <button class="btn btn-primary" (click)="gameStart()">Start</button>
