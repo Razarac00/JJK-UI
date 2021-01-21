@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Menu } from '../../models/menu.model';
 
 @Component({
   selector: 'app-menu',
@@ -7,13 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  menuData: Menu = new Menu();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  gameStart() {
-    
+  gameStart(): void {
+    console.log("Opponent chosen: " + this.menuData.opponent);
   }
 
 }
