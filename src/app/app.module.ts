@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './rock-paper-scissors/menu/menu.component';
+import { PlayComponent } from './rock-paper-scissors/play/play.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MenuComponent } from './rock-paper-scissors/menu/menu.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    MenuComponent
+    MenuComponent,
+    PlayComponent
   ],
   imports: [
     BrowserModule,
