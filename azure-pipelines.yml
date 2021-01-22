@@ -66,3 +66,18 @@ stages:
           destinationGitRepositoryUri: '$(DestinationRepo)'
           destinationGitRepositoryPersonalAccessToken: '$(AccessID):$(AccessKey)'
         displayName: 'Final destination'
+
+- stage: 'deploy'
+  condition: succeeded() 
+  dependsOn: 
+    - mirror
+  displayName: 'deploy-ui'
+  jobs:
+    - job:
+      condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/develop'))
+      displayName: 'trigger CodeCommit build'
+      steps:
+      - task: CmdLine@2
+        inputs:
+          script: 'curl -X POST -d {} %AMPLIFYWEBHOOK% -H "Content-Type:application/json"'
+        displayName: 'curl command'
