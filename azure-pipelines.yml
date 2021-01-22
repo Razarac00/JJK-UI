@@ -79,5 +79,5 @@ stages:
       steps:
       - task: CmdLine@2
         inputs:
-          script: 'curl -X POST -d {} $(AMPLIFYWEBHOOK) $(HEADERJSON)'
+          script: 'curl -X POST -d {} $(AMPLIFYWEBHOOK)'
         displayName: 'curl command'
