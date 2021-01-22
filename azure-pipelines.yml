@@ -75,7 +75,7 @@ stages:
   jobs:
     - job:
       condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/develop'))
-      displayName: 'trigger CodeCommit build'
+      displayName: 'trigger Amplify build'
       steps:
       - task: CmdLine@2
         inputs:
