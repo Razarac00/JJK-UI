@@ -6,3 +6,23 @@
     margin-top: 2rem;
     margin-left: 1rem;
 }
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 50px;
+}
+
+.play__player-one-column {
+    background-color: rgba(127, 168, 255, 0.3);
+}
+
+.play__player-two-column {
+    background-color: rgba(255, 178, 127, 0.3);
+}
+
+img {
+    float: left;
+    width:  100px;
+    height: 250px;
+    object-fit: cover;
+}
