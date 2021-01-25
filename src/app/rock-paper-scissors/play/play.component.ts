@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuDataService } from 'src/app/services/menu-data.service';
 
 @Component({
   selector: 'app-play',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayComponent implements OnInit {
 
-  constructor() { }
+  opponent: string = this.service.data.opponent;
+
+  constructor(private service: MenuDataService) { }
 
   ngOnInit(): void {
   }
