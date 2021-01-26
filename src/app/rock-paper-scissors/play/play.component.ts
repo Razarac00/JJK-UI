@@ -10,6 +10,7 @@ import { MenuDataService } from 'src/app/services/menu-data.service';
 export class PlayComponent implements OnInit {
 
   opponent: string = this.service.data.opponent;
+  private choice: string = '';
 
   constructor(private service: MenuDataService, private readonly router: Router) { }
 
@@ -21,6 +22,13 @@ export class PlayComponent implements OnInit {
 
   chose(act: string): void {
     console.log(act);
+    this.choice = act;
+  }
+
+  confirm(): void {
+    if (this.choice != '') {
+      this.router.navigate(['']);
+    }
   }
 
 }
