@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-
 import { MenuDataService } from './menu-data.service';
 
 describe('MenuDataService', () => {
   let service: MenuDataService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+    });
     service = TestBed.inject(MenuDataService);
   });
 
@@ -35,4 +35,6 @@ describe('MenuDataService', () => {
     
     expect(service.data.difficulty).toBe(expected);
   });
+
+
 });

@@ -9,4 +9,5 @@ export class MenuDataService {
   constructor() { }
 
   data: Menu = new Menu();
+
 }
