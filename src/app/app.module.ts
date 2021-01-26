@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './rock-paper-scissors/menu/menu.component';
 import { PlayComponent } from './rock-paper-scissors/play/play.component';
+import { ResultComponent } from './rock-paper-scissors/result/result.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PlayComponent } from './rock-paper-scissors/play/play.component';
     HeaderComponent,
     FooterComponent,
     MenuComponent,
-    PlayComponent
+    PlayComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,

@@ -19,9 +19,9 @@ export class MenuComponent implements OnInit {
   }
 
   gameStart(): void {
-    console.log("Opponent chosen: " + this.menuData.opponent);
-    console.log("Service says: " + this.service.data.opponent);
-    this.router.navigate(['rock-paper-scissors/play']);
+    if (this.menuData.opponent != '') {
+      this.router.navigate(['rock-paper-scissors/play']);
+    }
   }
 
 }
