@@ -14,6 +14,13 @@ export class PlayComponent implements OnInit {
   constructor(private service: MenuDataService, private readonly router: Router) { }
 
   ngOnInit(): void {
+    if (this.service.data.opponent == '') {
+      this.router.navigate(['']);
+    }
+  }
+
+  chose(act: string): void {
+    console.log(act);
   }
 
 }

@@ -1,10 +1,6 @@
-export class Player {
+export interface Player {
 
-    public playertype: string;
-    public action: string;
+    playertype: string;
+    action: string;
     
-    constructor() {
-        this.playertype = '';
-        this.action = '';
-    }
 }
