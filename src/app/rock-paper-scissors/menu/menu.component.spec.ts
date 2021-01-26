@@ -38,4 +38,12 @@ describe('MenuComponent', () => {
 
     expect(url.toString()).toBe('/rock-paper-scissors/play');
   });
+
+  it('should not redirect to play if opponent is not set', () => {
+    const spy = spyOn(router, 'navigateByUrl');
+    
+    component.gameStart();
+
+    expect(spy).not.toHaveBeenCalled();
+  });
 });
